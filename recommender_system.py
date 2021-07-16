@@ -233,7 +233,7 @@ def get_recommendations(title, cosine_sim=cosine_sim):
         idx=indices[title]
         similarity=list(enumerate(cosine_sim[idx]))
         similarity.sort(key=lambda x:x[1],reverse=True)
-        similarity=similarity[1:11] # first movie will be the same
+        similarity=similarity[1:8] # first movie will be the same
         recommended_movies=[i[0] for i in similarity]
         for i in recommended_movies:
             st.write(merged_df['title'].iloc[i])
