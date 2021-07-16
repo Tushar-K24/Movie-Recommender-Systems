@@ -6,6 +6,7 @@
 
 import numpy as np
 import pandas as pd
+import sklearn
 import pickle
 import streamlit as st
 
