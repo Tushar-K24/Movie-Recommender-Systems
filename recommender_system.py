@@ -231,7 +231,7 @@ def get_recommendations(title, cosine_sim=cosine_sim):
 # In[25]:
 options=np.array(merged_df['title'])
 options=options.reshape(1,-1)
-options=np.hstack(np.array([['Select an option']]),options)
+options=np.hstack((np.array([['Select an option']]),options))
 option = st.selectbox('Select your favourite movie',options.T)
 #option = st.selectbox('Select your favourite movie',merged_df['title'])
 get_recommendations(option)
