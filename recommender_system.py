@@ -3,6 +3,7 @@
 
 # In[1]:
 
+%%writefile recommender_system.py
 
 import numpy as np
 import pandas as pd
