@@ -231,13 +231,14 @@ def get_recommendations(title, cosine_sim=cosine_sim):
 # In[25]:
 options=np.array(merged_df['title'])
 options=options.reshape(1,-1)
-options=np.hstack((np.array([['Select an option']]),options))
-option = st.selectbox('Select your favourite movie',options.T)
+options=np.hstack((np.array([['Select an option']]),options)).T
+options=options.tolist()
+option = st.selectbox('Select your favourite movie',options)
 #option = st.selectbox('Select your favourite movie',merged_df['title'])
 get_recommendations(option)
 
 # In[ ]:
-
+#====================================================================================================================================================
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
 from htbuilder.funcs import rgba, rgb
