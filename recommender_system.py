@@ -229,6 +229,11 @@ def get_recommendations(title, cosine_sim=cosine_sim):
             st.write(merged_df['title'].iloc[i])
 
 # In[25]:
+
+st.title("Hamoye Capstone Project")
+st.header("Movie Recommender System (imt-01)")
+
+
 options=np.array(merged_df['title'])
 options=np.hstack((np.array(['Select an option']),options))
 options=pd.Series(options)
