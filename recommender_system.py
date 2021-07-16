@@ -216,16 +216,6 @@ indices = pd.Series(merged_df.index, index=merged_df['title'])
 
 # In[23]:
 
-
-def get_recommendations(title, cosine_sim=cosine_sim):
-    idx=indices[title]
-    similarity=list(enumerate(cosine_sim[idx]))
-    similarity.sort(key=lambda x:x[1],reverse=True)
-    similarity=similarity[1:11] # first movie will be the same
-    recommended_movies=[i[0] for i in similarity]
-    return recommended_movies
-
-
 # In[24]:
 
 def get_recommendations(title, cosine_sim=cosine_sim):
@@ -239,8 +229,11 @@ def get_recommendations(title, cosine_sim=cosine_sim):
             st.write(merged_df['title'].iloc[i])
 
 # In[25]:
-
-option = st.selectbox('Select your favourite movie',merged_df['title'])
+options=np.array(merged_df['title'])
+options=arr.reshape(1,-1)
+options=np.hstack(np.array([['Select an option']]),options)
+option = st.selectbox('Select your favourite movie',options.T)
+#option = st.selectbox('Select your favourite movie',merged_df['title'])
 get_recommendations(option)
 
 # In[ ]:
