@@ -6,7 +6,7 @@
 
 import numpy as np
 import pandas as pd
-import sklearn
+#import sklearn
 import pickle
 import streamlit as st
 
@@ -196,7 +196,7 @@ merged_df['word_string']=merged_df.apply(create_string,axis=1)
 # In[20]:
 
 
-#from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 #count = TfidfVectorizer(stop_words='english')
 count_matrix = loaded_vectorizer.fit_transform(merged_df['word_string'])
