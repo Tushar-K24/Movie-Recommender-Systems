@@ -232,7 +232,7 @@ def get_recommendations(title, cosine_sim=cosine_sim):
 
 st.title("Hamoye Capstone Project")
 st.header("Movie Recommender System (imt-01)")
-
+st.write('\n')
 
 options=np.array(merged_df['title'])
 options=np.hstack((np.array(['Select an option']),options))
