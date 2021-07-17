@@ -99,12 +99,6 @@ def extract_director(crew):
 
 # In[12]:
 
-def get_all(x):
-    if isinstance(x,list):
-        names=[i['name'] for i in x]
-        return names
-    return []
-
 #extracting top 3 elements from each list
 def get_top3(x):
     if isinstance(x,list):
@@ -161,11 +155,10 @@ def remove_capital_letters(x):
 # In[16]:
 
 merged_df['director']=merged_df['crew'].apply(extract_director)
-features=['keywords','production_companies']
+features=['keywords','genres']
 for feature in features:
     merged_df[feature]=merged_df[feature].apply(get_top3)
 merged_df['cast']=merged_df['cast'].apply(extract_cast)
-merged_df['genres']=merged_df['genres'].apply(get_all)
 
 
 # In[17]:
