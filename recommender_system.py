@@ -42,7 +42,7 @@ merged_df[['overview','tagline']]=merged_df[['overview','tagline']].fillna('')
 # In[6]:
 
 
-features=['homepage','production_countries','release_date','runtime','title_y','original_title']
+features=['homepage','production_countries','production_companies','release_date','runtime','title_y','original_title']
 merged_df.drop(features, axis=1, inplace=True)
 merged_df=merged_df.rename(columns={'title_x':'title'})
 
@@ -81,7 +81,7 @@ merged_df['score'] = (merged_df['popularity_norm'] + merged_df['rating_norm'])/2
 
 from ast import literal_eval
 
-features=['genres','keywords','production_companies','cast','crew']
+features=['genres','keywords','cast','crew']
 for feature in features:
     merged_df[feature]=merged_df[feature].apply(literal_eval)
 
@@ -164,7 +164,7 @@ merged_df['cast']=merged_df['cast'].apply(extract_cast)
 # In[17]:
 
 
-features=['genres','keywords','production_companies','cast','director']
+features=['genres','keywords','cast','director']
 for feature in features:
     merged_df[feature] = merged_df[feature].apply(remove_word_spaces)
 
