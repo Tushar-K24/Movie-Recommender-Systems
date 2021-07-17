@@ -99,6 +99,11 @@ def extract_director(crew):
 
 # In[12]:
 
+def get_all(x):
+    if isinstance(x,list):
+        names=[i['name'] for i in x]
+        return names
+    return []
 
 #extracting top 3 elements from each list
 def get_top3(x):
