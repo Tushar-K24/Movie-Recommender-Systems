@@ -155,12 +155,12 @@ def remove_capital_letters(x):
 
 # In[16]:
 
-
 merged_df['director']=merged_df['crew'].apply(extract_director)
-features=['genres','keywords','production_companies']
+features=['keywords','production_companies']
 for feature in features:
     merged_df[feature]=merged_df[feature].apply(get_top3)
 merged_df['cast']=merged_df['cast'].apply(extract_cast)
+merged_df['genres']=merged_df['genres'].apply(get_all)
 
 
 # In[17]:
