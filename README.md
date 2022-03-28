@@ -1,4 +1,4 @@
-# Movie-Recommender-Systems
+# Movie-Recommender-System
 
 ## Aim
 To recommend movies to the user based on their personal tastes.
