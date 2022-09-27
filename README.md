@@ -17,4 +17,4 @@ The main goal of our movie recommender system is to utilize a metric to compare 
 
 
 ![image](https://user-images.githubusercontent.com/62638544/192517993-4cf864a9-2b83-4966-874d-a082e1eb541d.png)
-![image](https://user-images.githubusercontent.com/62638544/192518110-752d2614-b9de-4cea-8944-adecfa8a2642.png)
+![image](https://user-images.githubusercontent.com/62638544/192518350-79432d4f-7548-4d8e-8966-719b962c3f38.png)
