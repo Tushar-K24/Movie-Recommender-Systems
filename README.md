@@ -1,5 +1,8 @@
 # Movie-Recommender-System
 
+## Dataset
+https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
 ## Aim
 To recommend movies to the user based on their personal tastes.
 
